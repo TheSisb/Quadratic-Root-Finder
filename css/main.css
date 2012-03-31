@@ -1,0 +1,151 @@
+/**
+*	Main CSS file for Quadratic Solver
+*	 - Not for the feint of heart -
+*
+*
+*	Copyright (C) 2012 - *, `````
+*
+*   This program is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   any later version.
+*
+*   This program is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+@font-face {
+  font-family: 'Averia Gruesa Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Averia Gruesa Libre'), local('AveriaGruesaLibre-Regular'), url('../font/averia400.woff') format('woff');
+}
+body {border-top:1px solid #777;margin:0;padding:0;background:url(../img/bg.png);font-size:62.5%;font-family:"Averia Gruesa Libre",sans-serif;color:#666;}
+/* Top shadow */
+body:before {content: "";position: fixed;top: -10px;left: 0;width: 100%;height: 10px;-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);box-shadow: 0px 0px 10px rgba(0,0,0,.8);z-index: 9;}
+
+/*
+*	Typography
+*/
+h1,h2,h3,h4,h5 {font-family:Graduate;color:#444;text-shadow:0 2px 3px #999;}
+section {font-size:1.6em;}
+	section p {font-size:1.2em;}
+::selection{background:#F76C8A;color:#000;}
+::-moz-selection{background:#F76C8A;color:#000;}
+a {color:#00adff;-webkit-transition:all .5s;-moz-transition:all .5s;transition:all .5s;}
+a:hover {color:blue;}
+
+/*
+*	Miscellaneous (layout)
+*/
+section,aside,footer,header,article {display:block;}
+.wrap {width:800px;margin:0 auto;}
+
+
+/*
+*	HEADER of page
+*/
+header {text-align:center;margin:2em 0 5em 0;}
+	header h1 {font-size:10em;margin:0;line-height:1em;}
+	header h4 {font-size:2em;margin-top:-10px;}
+
+
+/*
+*	PROBLEM section
+*/
+#problem {background:url('../img/classy_fabric.png');border-top:2px solid #555;border-bottom:3px solid #555;color:#bbb;}
+	#problem h2 {padding:.5em 0 .3em;color:#eee;}
+	#error {display:none;margin:0;line-height:1.1em;color:#00adff;}
+	form {text-align:center;font-size:1.6em;margin:1em 0 0;}
+		form p {font-size:1em;margin:0;text-align:left;}
+		form label {font-family:Verdana;font-size:.6em;cursor:pointer;}
+			form label:hover {color:#fff;}
+		#solve {
+			background-color: rgba(255, 255, 255, .1);
+			padding: 0 6px 15px;
+			border: 2px solid rgba(0, 0, 0, .2);
+			border-bottom-color: rgba(255, 255, 255, .1);
+			border-top-color: rgba(0, 0, 0, .3);
+			width: 200px;
+			margin: 30px auto 0;
+			cursor:pointer;
+			position:relative;
+			-webkit-border-radius: 10px;
+			   -moz-border-radius: 10px;
+			        border-radius: 10px;
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+					user-select: none;
+		}
+		#solve div {
+			vertical-align:bottom;
+			color:#ccc;
+			background: #999;
+			display: block;
+			padding: 20px;
+			font-size: 24pt;
+			margin-top: -2px;
+			text-shadow: -1px -1px rgba(0, 0, 0, .3);
+			-webkit-border-radius: 5px;
+			   -moz-border-radius: 5px;
+					border-radius: 5px;
+			-webkit-box-shadow: 0 1px #aaa,0 8px #808080,0 9px hsla(0,0%,100%,.05),0 -1px #aaa,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+			   -moz-box-shadow: 0 1px #aaa,0 8px #808080,0 9px hsla(0,0%,100%,.05),0 -1px #aaa,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+					box-shadow: 0 1px #aaa,0 8px #808080,0 9px hsla(0,0%,100%,.05),0 -1px #aaa,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+			-webkit-transition:all .1s;
+			   -moz-transition:all .1s;
+					transition:all .1s;
+		}
+		#solve div:hover {
+			background-color: #F25C7D;
+			-webkit-box-shadow: 0 1px #f76c8a,0 8px #e54769,0 9px hsla(0,0%,100%,.05),0 -1px #f76c8a,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+			   -moz-box-shadow: 0 1px #f76c8a,0 8px #e54769,0 9px hsla(0,0%,100%,.05),0 -1px #f76c8a,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+					box-shadow: 0 1px #f76c8a,0 8px #e54769,0 9px hsla(0,0%,100%,.05),0 -1px #f76c8a,0 10px 5px rgba(0,0,0,.33),0 5px rgba(0,0,0,.5),0 5px rgba(0,0,0,.5),0 6px hsla(0,0%,100%,.7),0 9px 1px #000;
+		}
+		#solve div:active {
+			background-color: #E94F70;
+			margin-bottom: -4px;
+			margin-top: 2px;
+			-webkit-box-shadow: 0 1px #F15B7B, 0 4px #CB2146, 0 5px rgba(255, 255, 255, 0.05), 0 -1px #F76C8A, 0 6px 5px rgba(0, 0, 0, 0.33), 0 2px rgba(255, 255, 255, 0.7), 0 5px 1px #000000;
+			   -moz-box-shadow: 0 1px #F15B7B, 0 4px #CB2146, 0 5px rgba(255, 255, 255, 0.05), 0 -1px #F76C8A, 0 6px 5px rgba(0, 0, 0, 0.33), 0 2px rgba(255, 255, 255, 0.7), 0 5px 1px #000000;
+					box-shadow: 0 1px #F15B7B, 0 4px #CB2146, 0 5px rgba(255, 255, 255, 0.05), 0 -1px #F76C8A, 0 6px 5px rgba(0, 0, 0, 0.33), 0 2px rgba(255, 255, 255, 0.7), 0 5px 1px #000000;
+		}
+
+
+/*
+*	SOLUTION section
+*/
+#solution {display:none;}
+	#solution h2 {margin:1.6em 0 1em 0;}
+	ol {}
+		li {display:none;margin:1.5em 0;}
+		li p {margin:.5em 0;}
+
+
+/*
+*	PROOF section
+*/
+#proof {display:none;margin-bottom:5em;}
+	#proof h2 {margin-top:2em;}
+	#proof h3 {margin:1em 0 .5em 0;}
+
+/*
+*	FOOTER styles
+*/
+footer {position:fixed;bottom:15px;right:10px;font-size:1.2em;}
+	footer p{margin:.4em 0;}
+
+
+/*
+*	Miscellaneous (elements)
+*/
+.special {color:#CB2146;padding:10px;}
+.center {text-align:center;}
+input {background:transparent;border:none;border-bottom:1px dashed #666;width:90px;text-align:right;color:#00adff;font-weight:900;font-size:.7em;outline:none;transition: all 0.25s ease-in-out;-webkit-transition: all 0.25s ease-in-out;-moz-transition: all 0.25s ease-in-out;}
+	input:hover {border-bottom:1px solid #333;}
+	input:focus {font-size:.85em;box-shadow: 0 0 5px rgba(255, 255, 255, 1);-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 1);-moz-box-shadow: 0 0 5px rgba(255, 255, 255, 1);}
+input[type="checkbox"] {width:15px;}

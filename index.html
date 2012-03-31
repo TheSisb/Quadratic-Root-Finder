@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta NAME="AUTHOR" CONTENT="111"/>
+	<meta name=keywords content="Quadratic equations, solving roots, find roots, quadratic solver, polynomial function" />
+	<meta name=description content="An easy way to solve the roots of quadratic equations.  Includes the steps taken for educational purposes." />
+
+	<title>Solve Quadratic Roots</title>
+	<link rel="shortcut icon" href="img/favicon.png" />
+
+	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<!-- | | (neck) -->
+<body>
+	<header>
+		<hgroup>
+			<h1>Quadratic Solver</h1>
+			<h4>// Solving the root of your problems</h4>
+		</hgroup>
+	</header>
+
+	<section id='problem'>
+		<div class='wrap'>
+			<h2>Identify the problem</h2>
+			<p>Please enter the values for <u>a, b, and c</u> for the following quadratic equation:</p>
+			<form>
+				<p class='center'>f(x) = <input type='text' id='a' name='a' value='0' maxlength="7" min="-9999999" max="9999999" autofocus="autofocus"/>x<sup>2</sup> +
+						<input type='text' id='b' name='b' value='0' maxlength="7" min="-9999999" max="9999999" />x +
+						<input type='text' id='c' name='c' value='0' maxlength="7" min="-9999999" max="9999999" />
+				</p>
+				<p><input type='checkbox' name='customSqrt' id='customSqrt' /><label for='customSqrt'>Custom square root function?</label></p>
+				<p><input type='checkbox' name='newtON' id='newtON' checked="checked"/><label for='newtON'>Apply Newton-Raphson's method?</label><a style='color:pink;text-decoration:none;' target="_blank" rel="nofollow" href='https://en.wikipedia.org/wiki/Newton%27s_method'> ?</a></p>
+				<div id='solve'>
+					<div>Solve</div>
+				</div>
+
+				<aside id='error'>sdfsdfsdfsdf sdf sd fsdf sdfsd f
+				</aside>
+				<br />
+			</form>
+		</div>
+	</section>
+
+	<section id='solution'>
+		<div class='wrap'>
+			<h2>The solution</h2>
+
+			<ol>
+				<li id='s1'>
+					<p>The discriminant (D), computed by <code>b<sup>2</sup> - 4ac</code> is calculated to be:</p>
+					<div id='D'></div>
+				</li>
+				<li id='s2'>
+					<p>The divider (div), computed by <code>2a</code> is calculated to be:</p>
+					<div id='div'></div>
+				</li>
+				<li id='s3'>
+
+				</li>
+			</ol>
+		</div>
+	</section>
+
+	<section id='proof'>
+		<div class='wrap'>
+			<h2>Proof I'm not just making it all up</h2>
+
+			<div id='proofText'>
+			</div>
+
+		</div>
+	</section>
+
+
+	<footer>
+		<p>I randomly <a href='https://twitter.com/TheSisb'>tweet</a> and equally as randomly <a href='https://github.com/TheSisb'>git</a>.</p>
+		<p>I'm trying to <a href='http://thesisb.tumblr.com'>blog</a> more often though.  <3</p>
+	</footer>
+
+
+	<script type="text/javascript" src="js/the.js"></script>
+</body>
+</html>
