@@ -108,6 +108,8 @@ function findRoots( inputs, sqrtStatus, polishStatus ) {
 	var b = inputs[1];
 	var c = inputs[2];
 
+	$('#proofText').html('');
+	$('#proof').hide();
 
 	if (a == 0.0){
 
@@ -177,8 +179,7 @@ function findRoots( inputs, sqrtStatus, polishStatus ) {
 		roots.push('i');
 		$('#s3').html("<p>Since D < 0, we know we have 2 <u>complex</u> roots; you can't regularly find the square root of a negative number.</p>" +
 					  "<p>Sorry, I can't <em>imagine</em> yet.  This is as far as I can go.</p>").fadeIn();
-		$('#proofText').html('');
-		$('#proof').hide();
+
 		return roots;
 	}
 
