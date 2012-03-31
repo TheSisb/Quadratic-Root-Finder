@@ -66,13 +66,13 @@ function validateInputs( inputs ){
 	var isArray = inputs.constructor.toString().indexOf("Array") != -1;
 	// If not an array, return the validity of this value alone
 	if ( !isArray) {
-		return /^(\-?){1}\d+((\.|\/){1}\d+)?$/.test(inputs);
+		return /^(\-?){1}\d+((\.|\/){1}[1-9]+[0-9]*)?$/.test(inputs);
 	}
 
 	// If array, return if all values are valid
 	var isNum;
 	for (var i=0; i < inputs.length; i++) {
-		isNum = /^(\-?){1}\d+((\.|\/){1}\d+)?$/.test(inputs[i]);
+		isNum = /^(\-?){1}\d+((\.|\/){1}[1-9]+[0-9]*)?$/.test(inputs[i]);
 		if ( !isNum )
 			return false;
 	}
@@ -238,7 +238,10 @@ function StringArrayToFloatArray( data ) {
 // Applies Newton-Raphson's Method to "polish" roots
 // https://en.wikipedia.org/wiki/Newton%27s_method
 function rootPolisher(root, a, b, c) {
-	return root - ( (a*root*root + b*root + c) / (a*root*2 + b) );
+	var base = (a*root*2 + b);
+	if (base == 0)
+		return root;
+	return root - ( (a*root*root + b*root + c) / base );
 }
 
 
