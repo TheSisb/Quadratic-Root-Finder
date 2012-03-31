@@ -3,7 +3,7 @@
 *	 - Not for the feint of heart -
 *
 *
-*	Copyright (C) 2012 - *, `````
+*	Copyright (C) 2012 - *, Shadi
 *
 *   This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -149,3 +149,4 @@ input {background:transparent;border:none;border-bottom:1px dashed #666;width:90
 	input:hover {border-bottom:1px solid #333;}
 	input:focus {font-size:.85em;box-shadow: 0 0 5px rgba(255, 255, 255, 1);-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 1);-moz-box-shadow: 0 0 5px rgba(255, 255, 255, 1);}
 input[type="checkbox"] {width:15px;}
+noscript {font-size:3em;background:#00adff;color:#000;width:100%;height:60px;display:block;text-align:center;padding-top:20px;}
